@@ -1,0 +1,10 @@
+.pagesPokemonLikeButton{
+    display: 'flex'; 
+    justify-content: 'space-between'; 
+}
+
+@media (max-width: 600){
+    .pagesPokemonLikeButton{
+        flex-direction: column;
+    }
+}
