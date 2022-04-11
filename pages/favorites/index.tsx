@@ -1,5 +1,5 @@
-
 import { useEffect, useState } from "react";
+import { Text } from "@nextui-org/react";
 import { Layout } from "../../components/layouts";
 import { FavoritePokemons } from "../../components/layouts/FavoritePokemons";
 import { NoFavorites } from "../../components/layouts/NoFavorites";
@@ -19,12 +19,14 @@ const FavoritesPage = () => {
 
   return (
     <Layout title={'Favoritos'}>
-
       {
-        (favoritePokemons.length === 0) ? 
-        <NoFavorites />
-        :
-        <FavoritePokemons pokemonsIds={favoritePokemons}/>
+        (favoritePokemons.length === 0) ?
+          <NoFavorites />
+          :
+          <>
+            <Text h2>Favoritos</Text>
+            <FavoritePokemons pokemonsIds={favoritePokemons} />
+          </>
       }
     </Layout>
   )
